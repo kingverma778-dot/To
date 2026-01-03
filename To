@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Online Image Compression Tool – Fast & Free</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Free online image compression tool. Reduce image size instantly with adjustable compression level. Fast, responsive, and privacy-friendly." />
+  <meta name="keywords" content="image compressor, compress image online, reduce image size, image optimization" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0f172a" />
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+  <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+
+  <!-- Google AdSense (GLOBAL) -->
+  <script async
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #111827;
+      --accent: #38bdf8;
+      --text: #e5e7eb;
+      --muted: #94a3b8;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* Background / Border Ads */
+    .bg-ad {
+      width: 120px;
+      background: #020617;
+      display: none;
+    }
+
+    @media (min-width: 1200px) {
+      .bg-ad {
+        display: block;
+      }
+    }
+
+    main {
+      flex: 1;
+      padding: 1rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    header, footer {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0.5rem 0;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .controls {
+      display: grid;
+      gap: 1rem;
+    }
+
+    input[type="file"] {
+      width: 100%;
+    }
+
+    input[type="range"] {
+      width: 100%;
+    }
+
+    button {
+      background: var(--accent);
+      border: none;
+      padding: 0.75rem;
+      font-weight: 600;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .preview {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .preview img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .ad {
+      margin: 1rem 0;
+      text-align: center;
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LEFT BACKGROUND AD (1) -->
+  <aside class="bg-ad">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="1111111111"
+      data-ad-format="vertical"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Image Compression Tool</h1>
+      <p>Compress images instantly in your browser</p>
+
+      <!-- HEADER AD (2) -->
+      <div class="ad">
+        <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+          data-ad-slot="2222222222"
+          data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </header>
+
+    <section class="card">
+      <div class="controls">
+        <input type="file" id="fileInput" accept="image/*">
+
+        <label>
+          Compression Quality:
+          <span id="qualityValue">80%</span>
+        </label>
+        <input type="range" id="quality" min="10" max="100" value="80">
+
+        <button id="compressBtn" disabled>Compress Image</button>
+      </div>
+    </section>
+
+    <!-- INLINE AD (3) -->
+    <div class="ad">
+      <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-slot="3333333333"
+        data-ad-format="auto"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <section class="card preview">
+      <div>
+        <h3>Original</h3>
+        <img id="originalImg">
+      </div>
+      <div>
+        <h3>Compressed</h3>
+        <img id="compressedImg">
+        <a id="downloadLink" download="compressed.jpg"></a>
+      </div>
+    </section>
+
+    <!-- INLINE ADS (4–8) -->
+    <div class="ad"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="4444444444" data-ad-format="auto"></ins></div>
+    <div class="ad"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="5555555555" data-ad-format="auto"></ins></div>
+    <div class="ad"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="6666666666" data-ad-format="auto"></ins></div>
+    <div class="ad"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="7777777777" data-ad-format="auto"></ins></div>
+    <div class="ad"><ins class="adsbygoogle" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="8888888888" data-ad-format="auto"></ins></div>
+
+    <footer>
+      <!-- FOOTER AD (9) -->
+      <div class="ad">
+        <ins class="adsbygoogle"
+          data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+          data-ad-slot="9999999999"
+          data-ad-format="auto"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+      © 2026 Image Compression Tool
+    </footer>
+  </main>
+
+  <!-- RIGHT BACKGROUND AD (10) -->
+  <aside class="bg-ad">
+    <ins class="adsbygoogle"
+      style="display:block"
+      data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+      data-ad-slot="1010101010"
+      data-ad-format="vertical"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </aside>
+
+  <script>
+    const fileInput = document.getElementById('fileInput');
+    const quality = document.getElementById('quality');
+    const qualityValue = document.getElementById('qualityValue');
+    const compressBtn = document.getElementById('compressBtn');
+    const originalImg = document.getElementById('originalImg');
+    const compressedImg = document.getElementById('compressedImg');
+    const downloadLink = document.getElementById('downloadLink');
+
+    quality.addEventListener('input', () => {
+      qualityValue.textContent = quality.value + '%';
+    });
+
+    fileInput.addEventListener('change', () => {
+      if (!fileInput.files[0]) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        originalImg.src = e.target.result;
+        compressBtn.disabled = false;
+      };
+      reader.readAsDataURL(fileInput.files[0]);
+    });
+
+    compressBtn.addEventListener('click', () => {
+      const img = new Image();
+      img.src = originalImg.src;
+
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = img.width;
+        canvas.height = img.height;
+
+        const ctx = canvas.getContext('2d');
+        ctx.drawImage(img, 0, 0);
+
+        const compressedData = canvas.toDataURL(
+          'image/jpeg',
+          quality.value / 100
+        );
+
+        compressedImg.src = compressedData;
+        downloadLink.href = compressedData;
+        downloadLink.textContent = 'Download Compressed Image';
+      };
+    });
+  </script>
+</body>
+</html>
